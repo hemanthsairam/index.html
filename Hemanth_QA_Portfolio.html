@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemanth Sai Ram Chitneedi | QA Automation Engineer</title>
+<meta name="description" content="Hemanth Sai Ram Chitneedi — QA Automation Engineer delivering quality assurance for digital health, clinical healthcare, financial-services, and enterprise ERP applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#071326;
+  --bg-2:#0a1930;
+  --surface:#0d1d35;
+  --surface-2:#102542;
+  --line:#1c3555;
+  --blue:#4d8dff;
+  --blue-bright:#76a9ff;
+  --violet:#8d7cff;
+  --cyan:#61d7e8;
+  --text:#f3f7fc;
+  --muted:#9aabc0;
+  --soft:#c6d3e2;
+  --display:"Space Grotesk",sans-serif;
+  --body:"DM Sans",sans-serif;
+  --mono:"JetBrains Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(850px 500px at 90% 0%,rgba(77,141,255,.13),transparent 62%),
+    radial-gradient(700px 500px at 5% 30%,rgba(141,124,255,.09),transparent 62%),
+    var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background-image:linear-gradient(rgba(118,169,255,.025) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(118,169,255,.025) 1px,transparent 1px);
+  background-size:56px 56px;
+  mask-image:linear-gradient(to bottom,black,transparent 72%);
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--blue);color:#fff}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(7,19,38,.82);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(118,169,255,.12);
+}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{
+  font:700 14px var(--mono);letter-spacing:.12em;text-transform:uppercase;
+  color:#fff;display:flex;align-items:center;gap:10px
+}
+.brand-mark{
+  width:10px;height:10px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--violet));
+  box-shadow:0 0 18px rgba(77,141,255,.7)
+}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{
+  font:700 12px var(--mono);
+  letter-spacing:.12em;text-transform:uppercase;color:#b9c7d8;
+  transition:.2s ease
+}
+.nav-links a:hover{color:#fff}
+.nav-cta{
+  padding:10px 15px;border:1px solid rgba(118,169,255,.3);
+  border-radius:999px;color:#fff!important;background:rgba(77,141,255,.08)
+}
+@media(max-width:760px){
+  .nav-links{gap:13px}.nav-links a{font-size:10px;letter-spacing:.07em}
+  .nav-cta{display:none}
+}
+
+/* HERO */
+.hero{padding:70px 0 82px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:58px;align-items:center}
+.kicker{
+  font:600 12px var(--mono);letter-spacing:.15em;text-transform:uppercase;
+  color:var(--blue-bright);margin-bottom:18px
+}
+h1{
+  font:700 clamp(42px,6vw,72px)/.98 var(--display);
+  letter-spacing:-.055em;max-width:720px
+}
+.hero-title{
+  margin-top:18px;font:600 clamp(18px,2vw,23px) var(--display);
+  color:var(--blue-bright)
+}
+.hero-copy{margin-top:20px;max-width:650px;color:var(--muted);font-size:17px}
+.hero-copy strong{color:var(--soft);font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:10px;
+  border:1px solid var(--line);font:600 12px var(--mono);letter-spacing:.04em;
+  transition:.2s ease
+}
+.btn:hover{transform:translateY(-2px);border-color:var(--blue)}
+.btn.primary{
+  border-color:transparent;
+  background:linear-gradient(135deg,var(--blue),#6c7cff);
+  box-shadow:0 12px 32px rgba(77,141,255,.2)
+}
+.hero-note{margin-top:20px;color:#73869d;font:400 11px var(--mono)}
+
+.hero-visual{position:relative}
+
+/* SHARED */
+section{padding:82px 0;border-top:1px solid rgba(118,169,255,.10)}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+.eyebrow{
+  font:600 11px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--blue-bright)
+}
+h2{font:700 clamp(29px,4vw,42px)/1.1 var(--display);letter-spacing:-.035em;margin-top:8px}
+.section-intro{max-width:580px;color:var(--muted);font-size:15px}
+
+/* IMPACT */
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.impact-card{
+  padding:23px;border:1px solid var(--line);border-radius:16px;
+  background:linear-gradient(145deg,rgba(16,37,66,.76),rgba(10,27,49,.8))
+}
+.impact-num{font:700 30px var(--display);color:#fff}
+.impact-label{margin-top:3px;font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--blue-bright)}
+.impact-card p{margin-top:10px;color:var(--muted);font-size:13px}
+
+/* WHAT I DO */
+.capability-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.capability{
+  padding:25px;border:1px solid var(--line);border-radius:17px;
+  background:rgba(13,29,53,.72)
+}
+.capability-index{font:600 11px var(--mono);color:var(--violet)}
+.capability h3{margin-top:15px;font:600 19px var(--display)}
+.capability p{margin-top:9px;color:var(--muted);font-size:14px}
+
+/* CASE STUDIES */
+.project-grid{display:grid;gap:22px}
+.project{
+  display:grid;grid-template-columns:260px 1fr;gap:36px;padding:32px;
+  border:1px solid var(--line);border-radius:19px;
+  background:linear-gradient(145deg,rgba(14,31,55,.86),rgba(9,23,43,.88));
+  transition:.22s ease
+}
+.project:hover{border-color:rgba(118,169,255,.35);box-shadow:0 20px 55px rgba(0,0,0,.18)}
+.project-side{border-right:1px solid var(--line);padding-right:28px;align-self:start;position:sticky;top:98px}
+.project-number{font:600 11px var(--mono);color:var(--violet);letter-spacing:.1em}
+.project h3{margin-top:12px;font:600 23px/1.2 var(--display)}
+.project-meta{margin-top:16px;display:grid;gap:9px}
+.project-meta div{font:500 12px/1.5 var(--body);color:var(--soft)}
+.project-meta span{
+  display:block;font:600 9px var(--mono);letter-spacing:.13em;text-transform:uppercase;
+  color:#7f93ab;margin-bottom:1px
+}
+.project-type{margin-top:18px;color:var(--blue-bright);font:600 10px/1.8 var(--mono);text-transform:uppercase;letter-spacing:.09em}
+.project-body{display:grid;gap:20px;min-width:0}
+.project-body p{color:var(--muted);font-size:14.5px}
+.project-block{padding-top:18px;border-top:1px solid rgba(118,169,255,.09)}
+.project-block:first-child{padding-top:0;border-top:0}
+.project-label{font:600 10px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:#c7d7e9;margin-bottom:9px}
+.project-label.accent{color:var(--cyan)}
+.cols-2{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.plist{display:grid;gap:9px}
+.plist li{list-style:none;position:relative;padding-left:17px;color:var(--muted);font-size:13.5px;line-height:1.6}
+.plist li:before{content:"";position:absolute;left:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+.plist.accuracy li:before{background:var(--cyan)}
+.evidence{columns:2;column-gap:30px;display:block}
+.evidence li{break-inside:avoid;margin-bottom:9px;display:block}
+.outcome{
+  padding:18px 20px;border-radius:12px;
+  background:rgba(77,141,255,.07);border:1px solid rgba(77,141,255,.2)
+}
+.outcome .project-label{color:var(--blue-bright)}
+.outcome .plist li{color:#cfe0f5}
+.outcome .plist li strong{color:#fff}
+
+/* EDUCATION / CONTACT */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.info-card{
+  padding:25px;border:1px solid var(--line);border-radius:17px;background:rgba(13,29,53,.68)
+}
+.info-card h3{font:600 19px var(--display)}
+.info-card p{margin-top:7px;color:var(--muted);font-size:14px}
+.contact-box{
+  padding:35px;border:1px solid rgba(118,169,255,.22);border-radius:22px;
+  background:linear-gradient(135deg,rgba(21,48,84,.8),rgba(12,28,51,.82));
+  text-align:center
+}
+.contact-box h2{margin-top:7px}
+.contact-box p{max-width:650px;margin:13px auto 0;color:var(--muted)}
+.contact-box .hero-actions{justify-content:center}
+footer{padding:30px 0 42px;color:#71859d;font:500 10px var(--mono);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+
+/* PROFILE PANEL */
+.profile-panel{min-height:410px;padding:30px;border:1px solid rgba(118,169,255,.24);border-radius:24px;background:radial-gradient(500px 240px at 90% 0%,rgba(77,141,255,.15),transparent 70%),linear-gradient(145deg,rgba(16,37,66,.92),rgba(8,21,40,.96));box-shadow:0 30px 80px rgba(0,0,0,.28);position:relative;overflow:hidden}
+.profile-panel:after{content:"";position:absolute;right:-70px;bottom:-70px;width:210px;height:210px;border-radius:50%;border:1px solid rgba(97,215,232,.12);box-shadow:0 0 0 22px rgba(97,215,232,.025),0 0 0 44px rgba(97,215,232,.018)}
+.profile-top{display:flex;justify-content:space-between;gap:15px;align-items:center}
+.profile-kicker{font:600 10px var(--mono);letter-spacing:.13em;color:var(--blue-bright)}
+.status-dot{font:600 9px var(--mono);letter-spacing:.1em;color:#b9d9ff}
+.status-dot:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--cyan);margin-right:7px;box-shadow:0 0 12px rgba(97,215,232,.7)}
+.profile-line{width:100%;height:1px;background:var(--line);margin:22px 0 28px}
+.profile-title{font:700 clamp(30px,4vw,48px)/1.03 var(--display);letter-spacing:-.045em}
+.profile-text{margin-top:17px;color:var(--muted);font-size:14px;max-width:470px}
+.profile-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:27px;position:relative;z-index:1}
+.profile-metrics div{padding:13px;border:1px solid rgba(118,169,255,.12);border-radius:10px;background:rgba(7,19,38,.45)}
+.profile-metrics strong{display:block;font:700 23px var(--display);color:#fff}
+.profile-metrics span{display:block;margin-top:3px;color:#8297b0;font:500 8px var(--mono);letter-spacing:.07em}
+.profile-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px;position:relative;z-index:1}
+.profile-tags span{padding:6px 8px;border:1px solid var(--line);border-radius:999px;color:#aebfd3;font:500 9px var(--mono)}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-visual{max-width:720px}
+  .impact-grid{grid-template-columns:repeat(2,1fr)}
+  .capability-grid{grid-template-columns:1fr}
+  .project{grid-template-columns:1fr;gap:22px}
+  .project-side{border-right:0;border-bottom:1px solid var(--line);padding:0 0 22px;position:static}
+  .cols-2{grid-template-columns:1fr;gap:22px}
+  .two-col{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .wrap{width:min(100% - 28px,1120px)}
+  .nav-inner{height:66px}
+  .brand{font-size:11px}
+  .nav-links{gap:10px}
+  .nav-links a{font-size:9px}
+  .nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}
+  .hero{padding:52px 0 60px}
+  h1{font-size:45px}
+  .hero-copy{font-size:15px}
+  .impact-grid{grid-template-columns:1fr 1fr}
+  .impact-card{padding:18px}
+  .impact-num{font-size:25px}
+  section{padding:60px 0}
+  .section-head{display:block}
+  .section-intro{margin-top:13px}
+  .project{padding:21px}
+  .evidence{columns:1}
+  .profile-panel{min-height:auto;padding:23px}
+  .profile-metrics{grid-template-columns:1fr}
+  .profile-title{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark"></span>HEMANTH / QA</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#work">WORK</a>
+      <a href="#approach">APPROACH</a>
+      <a href="#projects">CASE STUDIES</a>
+      <a href="#contact" class="nav-cta">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" style="border-top:0">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">QA AUTOMATION • RELEASE QUALITY • DATA ACCURACY</div>
+      <h1>Hemanth Sai Ram Chitneedi</h1>
+      <div class="hero-title">QA Automation Engineer</div>
+      <p class="hero-copy">
+        I deliver quality assurance for <strong>digital health, clinical healthcare, financial-services, and enterprise ERP</strong> applications.
+        I specialize in validating complete business workflows across user interfaces, APIs, integrations, mobile experiences, and data layers.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="mailto:hemanthsairam305@gmail.com">EMAIL ME →</a>
+        <a class="btn" href="#projects">VIEW CASE STUDIES</a>
+        <a class="btn" href="https://www.linkedin.com/in/hemanth-sai-ram-chitneedi-585a781b2" target="_blank" rel="noopener">LINKEDIN ↗</a>
+      </div>
+      <div class="hero-note">ATLANTA, GA · 4+ YEARS · HEALTHCARE · FINANCIAL SERVICES · ERP</div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="profile-panel">
+        <div class="profile-top">
+          <span class="profile-kicker">QA PROFILE / 01</span>
+          <span class="status-dot">QUALITY FOCUSED</span>
+        </div>
+        <div class="profile-line"></div>
+        <div class="profile-title">From requirement<br>to release confidence.</div>
+        <p class="profile-text">I test more than individual screens or isolated features. My QA work focuses on the complete business journey: what the user does, how the application responds, how systems exchange information, and whether the final data is correct.</p>
+        <div class="profile-metrics">
+          <div><strong>4+</strong><span>YEARS QA</span></div>
+          <div><strong>40%</strong><span>COVERAGE GAIN</span></div>
+          <div><strong>35%</strong><span>LESS REGRESSION TIME</span></div>
+        </div>
+        <div class="profile-tags">
+          <span>WEB</span><span>API</span><span>MOBILE</span><span>DATA</span><span>INTEGRATION</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">01 / IMPACT</div>
+        <h2>Professional summary</h2>
+      </div>
+      <p class="section-intro">My approach combines risk-based testing, end-to-end validation, data accuracy checks, clear defect reporting, and release-readiness evidence. I focus on the outcome that matters most: users can complete critical workflows reliably, and the data each workflow produces stays accurate across connected systems.</p>
+    </div>
+    <div class="impact-grid">
+      <article class="impact-card">
+        <div class="impact-num">+40%</div>
+        <div class="impact-label">Test coverage</div>
+        <p>Increased automated and regression test coverage on a pharmacy digital health platform.</p>
+      </article>
+      <article class="impact-card">
+        <div class="impact-num">−35%</div>
+        <div class="impact-label">Regression time</div>
+        <p>Reduced regression execution time while strengthening release confidence.</p>
+      </article>
+      <article class="impact-card">
+        <div class="impact-num">E2E</div>
+        <div class="impact-label">Workflow validation</div>
+        <p>Validated journeys from user action through services, integrations, and stored records.</p>
+      </article>
+      <article class="impact-card">
+        <div class="impact-num">4</div>
+        <div class="impact-label">Business domains</div>
+        <p>Digital health, clinical healthcare, financial services, and enterprise ERP.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">02 / TESTING FOCUS</div>
+        <h2>What I do on a project</h2>
+      </div>
+      <p class="section-intro">The emphasis is on the outcomes I deliver, so the story stays strong whatever role I'm applying for.</p>
+    </div>
+    <div class="capability-grid">
+      <article class="capability">
+        <div class="capability-index">01 — BUILD</div>
+        <h3>Build practical automation</h3>
+        <p>Design maintainable web and mobile automation around real user journeys, reusable components, and regression priorities.</p>
+      </article>
+      <article class="capability">
+        <div class="capability-index">02 — VALIDATE</div>
+        <h3>Validate beyond the UI</h3>
+        <p>Trace a workflow through the API and database to verify business rules, data accuracy, integrations, and failure scenarios.</p>
+      </article>
+      <article class="capability">
+        <div class="capability-index">03 — RELEASE</div>
+        <h3>Make release quality visible</h3>
+        <p>Track test evidence, document defects clearly, and communicate release readiness so teams can decide with confidence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">03 / SELECTED QA CASE STUDIES</div>
+        <h2>Selected QA case studies</h2>
+      </div>
+      <p class="section-intro">The projects below demonstrate how I approach complex testing problems, validate critical business processes, and provide clear evidence for release decisions.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- PROJECT 01 -->
+      <article class="project">
+        <div class="project-side">
+          <div class="project-number">PROJECT 01</div>
+          <h3>Digital Health Patient Portal QA</h3>
+          <div class="project-meta">
+            <div><span>Company</span>CVS Health</div>
+            <div><span>Role</span>QA Automation Engineer</div>
+            <div><span>Period</span>March 2025 – Present</div>
+          </div>
+          <div class="project-type">Digital Health Platform · Web · Mobile · API · Data Validation</div>
+        </div>
+        <div class="project-body">
+          <div class="project-block">
+            <div class="project-label">Project overview</div>
+            <p>Supported quality assurance for a pharmacy digital health platform that enables patients to manage prescription-related activities, appointments, profile information, notifications, and other digital healthcare interactions.</p>
+            <p style="margin-top:10px">The platform required reliable experiences across multiple application layers because a failure in one layer could affect patient access, healthcare workflow completion, data accuracy, or downstream pharmacy operations.</p>
+          </div>
+          <div class="project-block">
+            <div class="project-label">Quality objective</div>
+            <p>Ensure patients could safely complete high-priority digital health journeys while confirming that every action created accurate and consistent records across the application, service, and data layers.</p>
+          </div>
+          <div class="project-block cols-2">
+            <div>
+              <div class="project-label">Key work delivered</div>
+              <ul class="plist">
+                <li>Developed a risk-based QA strategy focused on patient-facing workflows with the highest impact on access, engagement, and care coordination.</li>
+                <li>Validated secure patient login, account recovery, profile updates, appointment selection, prescription refill requests, notification preferences, and error-handling scenarios.</li>
+                <li>Tested complete business workflows from patient action through backend processing and record creation to confirm expected outcomes at every stage.</li>
+                <li>Evaluated functional behavior across web, mobile, APIs, integrations, and database records rather than testing each layer in isolation.</li>
+                <li>Performed regression, smoke, integration, exploratory, accessibility, performance, and release-readiness testing.</li>
+                <li>Documented defects with clear reproduction steps, expected versus actual behavior, supporting evidence, business impact, and severity to support efficient triage.</li>
+                <li>Partnered with product, engineering, and design teams to clarify requirements, identify risks early, and validate fixes before production release.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="project-label accent">Accuracy and quality validation</div>
+              <ul class="plist accuracy">
+                <li>Verified that prescription refill requests reflected the correct patient, medication details, request status, and workflow outcome across connected systems.</li>
+                <li>Confirmed appointment selections, cancellations, and updates were accurately reflected in both the patient experience and backend records.</li>
+                <li>Validated that profile and communication-preference updates persisted correctly and did not create conflicting patient information.</li>
+                <li>Tested negative and edge-case scenarios, including invalid inputs, incomplete information, expired sessions, authorization failures, duplicate requests, and service interruptions.</li>
+                <li>Checked that user-facing messages, API responses, and stored records remained consistent when a workflow succeeded, failed, or required additional action.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-block">
+            <div class="project-label">Evidence produced</div>
+            <ul class="plist evidence">
+              <li>Risk-based test strategy and release test plan.</li>
+              <li>End-to-end test scenarios for critical patient journeys.</li>
+              <li>API and data-validation checklists.</li>
+              <li>Regression and smoke-test execution results.</li>
+              <li>Defect reports with traceable evidence.</li>
+              <li>Accessibility and release-readiness validation records.</li>
+              <li>Quality status reporting for release decisions.</li>
+            </ul>
+          </div>
+          <div class="outcome">
+            <div class="project-label">Measured result</div>
+            <ul class="plist">
+              <li>Increased automated and regression test coverage by <strong>40%</strong>.</li>
+              <li>Reduced regression execution time by <strong>35%</strong>.</li>
+              <li>Strengthened release confidence by expanding validation across user interface, service, integration, and data layers.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 02 -->
+      <article class="project">
+        <div class="project-side">
+          <div class="project-number">PROJECT 02</div>
+          <h3>Clinical Healthcare Application QA</h3>
+          <div class="project-meta">
+            <div><span>Company</span>Cognizant — Client: AstraZeneca</div>
+            <div><span>Role</span>QA Engineer</div>
+            <div><span>Period</span>November 2023 – December 2024</div>
+          </div>
+          <div class="project-type">Clinical Healthcare Applications · Web · Mobile · API · Integration</div>
+        </div>
+        <div class="project-body">
+          <div class="project-block">
+            <div class="project-label">Project overview</div>
+            <p>Delivered quality assurance for clinical healthcare applications supporting business and operational workflows across web, mobile, backend services, enterprise integrations, and clinical data exchanges.</p>
+            <p style="margin-top:10px">The project required thorough validation because healthcare workflows depend on accurate data, reliable system integration, controlled user access, and clear release evidence.</p>
+          </div>
+          <div class="project-block">
+            <div class="project-label">Quality objective</div>
+            <p>Validate that clinical application workflows operated correctly across connected systems, clinical data exchanges remained accurate, and releases met functional, integration, and user-acceptance expectations.</p>
+          </div>
+          <div class="project-block cols-2">
+            <div>
+              <div class="project-label">Key work delivered</div>
+              <ul class="plist">
+                <li>Translated requirements and acceptance criteria into functional, regression, integration, end-to-end, and user-acceptance test coverage.</li>
+                <li>Designed test scenarios for business-critical workflows across web, mobile, service, and integration layers.</li>
+                <li>Validated application behavior during normal usage, invalid input, system errors, missing data, service unavailability, and integration failures.</li>
+                <li>Supported release readiness through smoke testing, regression testing, exploratory testing, defect verification, and evidence collection.</li>
+                <li>Investigated defects by reproducing failures, isolating impacted workflows, gathering logs and request-response evidence, and documenting business impact.</li>
+                <li>Worked closely with cross-functional delivery teams to clarify expected behavior, prioritize defects, retest fixes, and maintain quality visibility throughout the release cycle.</li>
+                <li>Identified test-coverage gaps and recommended improvements to strengthen validation of high-risk workflows.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="project-label accent">Accuracy and quality validation</div>
+              <ul class="plist accuracy">
+                <li>Validated that clinical and operational data passed correctly between the user interface, backend services, and integrated enterprise systems.</li>
+                <li>Confirmed API responses matched expected business rules, error behavior, status handling, and data formats.</li>
+                <li>Checked that records created or updated through the application were accurately reflected in downstream systems.</li>
+                <li>Verified data consistency for create, update, search, status-change, and error-recovery workflows.</li>
+                <li>Tested authorization and access scenarios to ensure users could view and perform only the actions permitted for their role.</li>
+                <li>Confirmed that defects were traceable to requirements, reproducible by development teams, and properly retested after resolution.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-block">
+            <div class="project-label">Evidence produced</div>
+            <ul class="plist evidence">
+              <li>Requirements-based test scenarios and test-case repository.</li>
+              <li>Functional, regression, integration, and UAT execution evidence.</li>
+              <li>API validation records and response-analysis documentation.</li>
+              <li>Defect reports with reproduction steps, severity, impact, and retest status.</li>
+              <li>Test summary reports and release-readiness updates.</li>
+              <li>Coverage-gap analysis and improvement recommendations.</li>
+            </ul>
+          </div>
+          <div class="outcome">
+            <div class="project-label">Quality outcome</div>
+            <ul class="plist">
+              <li>Improved visibility into release risk by maintaining clear coverage across functional, integration, and end-to-end workflows.</li>
+              <li>Helped reduce the likelihood of post-release defects by identifying issues before release and ensuring fixes were validated across affected workflows.</li>
+              <li>Strengthened confidence in clinical data exchange by validating consistency across user-facing, backend, and integrated systems.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 03 -->
+      <article class="project">
+        <div class="project-side">
+          <div class="project-number">PROJECT 03</div>
+          <h3>Enterprise ERP and Financial Workflow QA</h3>
+          <div class="project-meta">
+            <div><span>Company</span>Capgemini</div>
+            <div><span>Role</span>QA Analyst</div>
+            <div><span>Period</span>May 2021 – April 2023</div>
+          </div>
+          <div class="project-type">SAP S/4HANA · Oracle ERP · Financial Services · Integration · UAT</div>
+        </div>
+        <div class="project-body">
+          <div class="project-block">
+            <div class="project-label">Project overview</div>
+            <p>Supported quality assurance for enterprise ERP and financial-services workflows involving order processing, procurement, invoicing, supplier management, approvals, financial postings, integrations, and compliance-sensitive data.</p>
+            <p style="margin-top:10px">The project involved interconnected business processes where one incorrect value, approval, interface message, or access-control issue could affect financial reporting, operational delivery, audit records, or downstream systems.</p>
+          </div>
+          <div class="project-block">
+            <div class="project-label">Quality objective</div>
+            <p>Ensure critical enterprise workflows processed accurately from initiation through completion, including correct calculations, approval routing, integration behavior, financial records, and role-based access.</p>
+          </div>
+          <div class="project-block cols-2">
+            <div>
+              <div class="project-label">Key work delivered</div>
+              <ul class="plist">
+                <li>Created and executed functional, regression, integration, and end-to-end test cases for enterprise business workflows.</li>
+                <li>Validated Order-to-Cash processes, including customer data, sales orders, order changes, invoicing, payment-related workflows, and financial postings.</li>
+                <li>Validated Procure-to-Pay processes, including supplier onboarding, purchase orders, approval workflows, goods receipt, invoice processing, and payment-related data.</li>
+                <li>Tested business rules, approval limits, exception paths, error messages, duplicate entries, incomplete data, and status transitions.</li>
+                <li>Performed data validation across application screens, interfaces, ETL processes, and backend records.</li>
+                <li>Supported user-acceptance testing by preparing scenarios, tracking issues, maintaining test evidence, and assisting with sign-off readiness.</li>
+                <li>Participated in defect triage, root-cause discussions, fix validation, regression testing, and test-status reporting.</li>
+                <li>Coordinated with global development and business teams within Agile delivery cycles.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="project-label accent">Accuracy and quality validation</div>
+              <ul class="plist accuracy">
+                <li>Verified that customer, supplier, product, purchase-order, and sales-order information remained accurate throughout connected workflows.</li>
+                <li>Confirmed invoice values, taxes, quantities, discounts, approval statuses, and financial postings matched expected business rules.</li>
+                <li>Validated that data transferred correctly between ERP modules and connected systems without duplication, loss, incorrect mapping, or status mismatch.</li>
+                <li>Tested role-based permissions, approval routing, and access controls to confirm users could perform only authorized actions.</li>
+                <li>Verified data masking and access-control behavior for compliance-sensitive records.</li>
+                <li>Tested high-volume and exception scenarios to identify performance, validation, and workflow risks before release.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-block">
+            <div class="project-label">Evidence produced</div>
+            <ul class="plist evidence">
+              <li>Order-to-Cash and Procure-to-Pay test scenarios.</li>
+              <li>Requirements traceability matrix.</li>
+              <li>Functional, integration, regression, and UAT execution reports.</li>
+              <li>Data-validation checklist for ERP and interface records.</li>
+              <li>Access-control and approval-workflow test evidence.</li>
+              <li>Defect-triage records and root-cause documentation.</li>
+              <li>UAT sign-off and release-readiness documentation.</li>
+            </ul>
+          </div>
+          <div class="outcome">
+            <div class="project-label">Quality outcome</div>
+            <ul class="plist">
+              <li>Increased confidence that financial and operational workflows produced accurate results across ERP modules and integrated systems.</li>
+              <li>Improved defect detection through end-to-end validation of business rules, approvals, calculations, and data movement.</li>
+              <li>Supported compliant release decisions with documented functional, data, access-control, and user-acceptance evidence.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">04 / CREDENTIALS</div>
+        <h2>Education &amp; focus</h2>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="info-card">
+        <h3>M.S. in Information Systems</h3>
+        <p>Saint Louis University · St. Louis, MO · Aug 2023 — May 2025</p>
+      </div>
+      <div class="info-card">
+        <h3>Role-flexible QA profile</h3>
+        <p>Open to QA Engineer, QA Automation Engineer, SDET, Software Test Engineer, and Manual/Automation Testing opportunities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <div class="eyebrow">05 / CONTACT</div>
+      <h2>Let's build quality into the release.</h2>
+      <p>Across healthcare, digital health, financial-services, and ERP environments, I use risk-based testing and documented evidence to support confident release decisions. If your team needs that, I'd be glad to connect.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="mailto:hemanthsairam305@gmail.com">HEMANTHSAIRAM305@GMAIL.COM</a>
+        <a class="btn" href="tel:+13142033397">314-203-3397</a>
+        <a class="btn" href="https://www.linkedin.com/in/hemanth-sai-ram-chitneedi-585a781b2" target="_blank" rel="noopener">LINKEDIN ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <span>© <span id="year"></span> HEMANTH SAI RAM CHITNEEDI</span>
+  <span>QA AUTOMATION · API · DATA · MOBILE · RELEASE QUALITY</span>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+const progress=document.createElement("div");
+progress.style.cssText="position:fixed;left:0;top:0;height:2px;width:0;z-index:200;background:linear-gradient(90deg,#4d8dff,#8d7cff,#61d7e8);box-shadow:0 0 12px rgba(77,141,255,.55)";
+document.body.appendChild(progress);
+window.addEventListener("scroll",()=>{
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  progress.style.width=(max>0?(window.scrollY/max)*100:0)+"%";
+},{passive:true});
+</script>
+</body>
+</html>
